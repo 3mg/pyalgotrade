@@ -9,13 +9,13 @@ sudo: required
 
 language: python
 python:
-  - "2.7"
+  - "3.6"
 
 services:
   - docker
 
 before_install:
-  - docker pull gbecedillas/pyalgotrade:0.18
+  - docker pull digi604/pyalgotrade:py3
   - cp travis/Dockerfile .
   - docker build -t testcases .
   - sudo pip install coveralls
